@@ -6,11 +6,14 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-    text-decoration: none;
     padding-top: 80px;
     margin-left: 18%;
     margin-right: 15px;
-    display: flex;
-    justify-content: space-between;
+`
 
+export const Cadastro = styled.div`
+    z-index: 999;
+    background: '#000';
+    width: 800px;
+    height: 800px;
 `

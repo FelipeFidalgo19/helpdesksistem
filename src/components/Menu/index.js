@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { Link , useNavigate} from 'react-router-dom';
+
 import * as S from './styles';
 
 import Perfil from '../../assets/perfil.png';
@@ -16,7 +18,6 @@ function Menu( { userName , cargo } ) {
   return (
     <S.Container>
       <S.Cont>
-        
         <S.Perfil>
             <img src={Perfil} alt="Perfil"/>
             <S.Content>
@@ -33,19 +34,28 @@ function Menu( { userName , cargo } ) {
             </S.Content>
         </S.Perfil>
 
+        <Link to={`/`} style={{ textDecoration: 'none' }}>
+          <S.MenuBody actived={actived === "Gerenciamento"} onClick={() => setActived("Gerenciamento")}>
+            <img src={Gerenciamento} alt="Icon Gerenciamento"/>
+            <p>Gerenciamento</p>
+          </S.MenuBody>
+        </Link>
 
-        <S.MenuBody actived={actived === "Gerenciamento"} onClick={() => setActived("Gerenciamento")}>
-          <img src={Gerenciamento} alt="Icon Gerenciamento"/>
-          <p>Gerenciamento</p>
-        </S.MenuBody>
-        <S.MenuBody actived={actived === "Funcionarios"} onClick={() => setActived("Funcionarios")}>
-          <img src={Funcionarios} alt="Icon Funcionarios"/>
-          <p>Funcionarios</p>
-        </S.MenuBody>
-        <S.MenuBody actived={actived === "Departamento"} onClick={() => setActived("Departamento")}>
-          <img src={Departamento} alt="Icon Departamento"/>
-          <p>Departamento</p>
-        </S.MenuBody>
+        <Link to={`/funcionarios`} style={{ textDecoration: 'none' }}>
+          <S.MenuBody actived={actived === "Funcionarios"} onClick={() => setActived("Funcionarios")}>
+            <img src={Funcionarios} alt="Icon Funcionarios"/>
+            <p>Funcionarios</p>
+          </S.MenuBody>
+        </Link>
+
+        <Link to={`/departamento`} style={{ textDecoration: 'none' }}>
+          <S.MenuBody actived={actived === "Departamento"} onClick={() => setActived("Departamento")}>
+            <img src={Departamento} alt="Icon Departamento"/>
+            <p>Departamento</p>
+          </S.MenuBody>
+        </Link>
+
+
         <S.MenuBody actived={actived === "Cliente"} onClick={() => setActived("Cliente")}>
           <img src={Cliente} alt="Icon Cliente"/>
           <p>Cliente</p>

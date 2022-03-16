@@ -1,7 +1,6 @@
 import React from 'react';
 import * as S from './styles';
 
-
 function Card({color, img, titulo , descricao}) {
   return (
     <S.Container color={color}>

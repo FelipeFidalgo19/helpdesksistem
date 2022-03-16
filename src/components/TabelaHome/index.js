@@ -6,6 +6,7 @@ function TabelaHome() {
   return (
     <S.Container >
       <h1>Tickets</h1>
+      <S.Table>
         <table>
           <thead>
             <tr>
@@ -120,6 +121,7 @@ function TabelaHome() {
             </tr>
           </tbody>
         </table>
+        </S.Table>
     </S.Container>
   );
 }
