@@ -32,8 +32,8 @@ function Home() {
     <S.Container>
       <Header countNotification={3} />
       <Menu 
-      userName={nomeUsuario.nome}
-      cargo={"Cargo"} 
+        userName={nomeUsuario.nome}
+        cargo={"Cargo"} 
       />
       <S.Content>
         <Link to={`/funcionarios`} style={{ textDecoration: 'none' }}>

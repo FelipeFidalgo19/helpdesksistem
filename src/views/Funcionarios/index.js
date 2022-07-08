@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import { Link , useNavigate} from 'react-router-dom';
 import * as S from './styles';
 
 import Header from '../../components/Header';
@@ -10,6 +9,7 @@ import api from '../../services/api';
 function Funcionarios() {
 
   const [nomeUsuario,setNomeUsuario] = useState([]);
+  
   async function sendUsu(){
     await api.get('/user/senduser/3')
       .then(response => {
@@ -27,7 +27,13 @@ function Funcionarios() {
       <Menu userName={nomeUsuario.nome} cargo={"Cargo"} />
       <S.Content>
         <S.Cadastro>
-          <p>dasdas</p>
+          <h1>Funcionarios</h1>
+          <label className='nome'>Nome</label>
+          <input type='text' className='nome' placeholder='Digite o nome do funcionario'/>
+          <select>
+            <option>Selecione uma função</option>
+            <option>sfs</option>
+          </select>
         </S.Cadastro>
       </S.Content>
     </S.Container>

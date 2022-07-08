@@ -12,8 +12,33 @@ export const Content = styled.div`
 `
 
 export const Cadastro = styled.div`
-    z-index: 999;
-    background: '#000';
+
+    border: 1px solid #4DFF94;
+    padding: 10px;
+    background: #FFFFFF;
     width: 800px;
-    height: 800px;
+    height: 535px;
+    border-radius: 8px;
+
+    p,h1,label{
+        color: #4DFF94;
+    }
+    input,select{
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #4DFF94;
+    }
+    select{
+        color: #4DFF94;
+    }
+  
+    .nome{
+        width: 350px;
+    }
+  
+    input::placeholder{
+        color: #4DFF94;
+        opacity: 0.5;
+    }
+
 `
